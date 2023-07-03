@@ -1,7 +1,5 @@
 <template>
-    <navbar/>
     <v-carousel
-    :cycle="1000"
     hide-delimiters
     show-arrows="hover"
   >
@@ -141,49 +139,25 @@
       </div>
     
 
-      <div class="bg-green-100 py-7 mt-12">
+      <div class="bg-green-100 dark:bg-green-900 py-7 mt-12">
       <div class="font-bold text-2xl text-center  mb-5 ">🌱 Projects and reallisations</div>
 
           <div class="flex flex-row justify-center mx-2">
       <div class="grid grid-cols-2 lg:grid-cols-6 self-center gap-4 mt-4">
-         <v-lazy
+         
+         <v-lazy v-for="post in mainStore.blogPosts" v-bind:key="post._id"
   :min-height="50"
   :options="{'threshold':0.5}"
   transition="fade-transition">
-      <div class="slideImage">
+      <div  :style="`background-image: url(${CreateURL(post.mainImage, 1200, 700)})`" class="slideImage">
 <div class="shadow">
-   <div class="font-bold text-sm text-white mx-2 ctx">
-  loremp ipsum dolor sit amet to see 45
+   <div class="font-bold text-xs text-white mx-2 ctx">
+  {{ post.title.slice(0,43) }}...
 </div>
 </div>
       </div>
       </v-lazy>
 
-      <v-lazy
-  :min-height="50"
-  :options="{'threshold':0.5}"
-  transition="fade-transition">
-      <div class="slideImage">
-<div class="shadow">
-   <div class="font-bold text-sm text-white mx-2 ctx">
-  loremp ipsum dolor sit amet to see 45
-</div>
-</div>
-      </div>
-      </v-lazy>
-
-      <v-lazy
-  :min-height="50"
-  :options="{'threshold':0.5}"
-  transition="fade-transition">
-      <div class="slideImage">
-<div class="shadow">
-   <div class="font-bold text-sm text-white mx-2 ctx">
-  loremp ipsum dolor sit amet to see 45
-</div>
-</div>
-      </div>
-      </v-lazy>
    </div>
 </div>   
 
@@ -252,8 +226,8 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="px-4 pt-5 pb-12 bg-green-300 mt-14">
-<div class="font-bold text-2xl text-center mt-6 "> 
+<div class="px-4 pt-5 pb-12 bg-green-300 dark:bg-green-700 mt-14">
+<div class="font-bold text-2xl text-gray-900 text-center mt-6 "> 
    Help us provide support to those who need it most</div>
    <div class="flex flext-row justify-center mt-4">
  <v-btn variant="elevated" size="large" rounded="xl" color="amber-lighten-1"> 
@@ -300,7 +274,7 @@ Never the less, you can see our current achivements so far
       loading="lazy"
       src="https://mentoring-club-mentors.s3.eu-central-1.amazonaws.com/profilepics/small/0ed7bf8a-4d08-47c7-b5d7-3957340f1c9b.jpg" alt="" srcset="">
       <div class="flex flex-col justify-center mx-4 ">
-      <p class="text-xl font-extrabold text-green-700">Luc Ngassam
+      <p class="text-xl font-extrabold text-green-700">Eric Yanou
 </p>
 <p class="text-sm font-thin">Director of operations</p>
    </div>    </div> 
@@ -337,7 +311,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="bg-green-100">
+<div class="bg-green-100 dark:bg-green-900">
 <div class="font-bold text-2xl text-center pt-8 mb-6  "> 
    📰 Our blog</div>
  <div class="grid grid-cols-1 lg:grid-cols-3">
@@ -377,19 +351,18 @@ Never the less, you can see our current achivements so far
 </div>
 </div>
 
-<footerx></footerx>
 
 </template>
 
 <script setup>
-   import navbar from '../components/navbar.vue';
    import 'vue3-carousel/dist/carousel.css'
    import footerx from '../components/footer.vue';
 
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-
+import {useMainStore} from '../stores/mainstore'
 import { ref } from 'vue';
+import {CreateURL} from '../utils'
 
+const mainStore = useMainStore()
 const readMore = ref(false)
 </script>
 
@@ -410,7 +383,7 @@ const readMore = ref(false)
    width: 120px;
 }
 .ctx{
-   margin-top: 140px;
+   margin-top: 135px;
 }
 .slideImage{
    background-image: url('https://img.freepik.com/premium-vector/blank-a4-paper-template-brochure-mockup_97886-7353.jpg');

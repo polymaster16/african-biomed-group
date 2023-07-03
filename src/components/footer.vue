@@ -1,5 +1,5 @@
 <template>
-   <div class="footer p-10 bg-base-200 text-base-content">
+   <div class="footer p-10 text-base-content">
   <div>
     <img class="ml-3" width="150"
      src="@/assets/logox.png">    <p>African Biomed Group Ltd.<br/>Improving lives, 1 medical facility at a time</p>
