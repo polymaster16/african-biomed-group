@@ -11,11 +11,11 @@
     :options="{'threshold':0.5}"
     transition="fade-transition">
         <div  :style="`background-image: url(${CreateURL(post.mainImage, 1200, 700)})`" class="slideImage">
-  <div class="shadow">
-     <div class="font-bold text-xs text-white mx-2 ctx">
+  <RouterLink :to="`/achievements/${post.slug.current}`" class="shadow">
+     <div  class="font-bold text-xs text-white mx-2 ctx">
     {{ post.title.slice(0,43) }}...
   </div>
-  </div>
+  </RouterLink>
         </div>
         </v-lazy>
   
