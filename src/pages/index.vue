@@ -1,5 +1,6 @@
 <template>
     <v-carousel
+    :cycle="2000"
     hide-delimiters
     show-arrows="hover"
   >
