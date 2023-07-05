@@ -227,7 +227,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="px-4 pt-5 pb-12 bg-green-300 dark:bg-green-700 mt-14">
+<div class="px-4 pt-5 pb-12 bg-blue-300 dark:bg-blue-400 mt-14">
 <div class="font-bold text-2xl text-gray-900 text-center mt-6 "> 
    Help us provide support to those who need it most</div>
    <div class="flex flext-row justify-center mt-4">
