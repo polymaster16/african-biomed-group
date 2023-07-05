@@ -283,7 +283,7 @@ Never the less, you can see our current achivements so far
 
 <div class="secte mb-14 mt-10 flex flex-col justify-center">
    <div class="flex flex-row justify-center">
- <button class="btn  glass text-white">Learn more about us </button>
+ <button @click="router.push('/about')" class="btn  glass text-white">Learn more about us </button>
 </div>
 </div>
 
@@ -296,7 +296,7 @@ Never the less, you can see our current achivements so far
       <h1 class="text-3xl font-bold  lg:mx-1">Cameroon!</h1>
       <p class="py-6  lg:mx-1">In Cameroon, our campaigns and donations have made a lasting impact. Join us in creating change, assisting those in need, and building a better future. Together, we make a difference.</p>
       <div class="flex flex-row justify-start mx-4">
-      <v-btn rounded="full" variant="tonal" color="amber-lighten-1"><p class="text-sm">⭐ See our achievements</p> </v-btn>
+      <v-btn @click="router.push('/achievements')" rounded="full" variant="tonal" color="amber-lighten-1"><p class="text-sm">⭐ See our achievements</p> </v-btn>
          </div>
 
    </div>
@@ -362,9 +362,11 @@ Never the less, you can see our current achivements so far
 import {useMainStore} from '../stores/mainstore'
 import { ref } from 'vue';
 import {CreateURL} from '../utils'
+import { RouterLink, useRouter } from 'vue-router';
 
 const mainStore = useMainStore()
 const readMore = ref(false)
+const router = useRouter()
 </script>
 
 <style scoped>
