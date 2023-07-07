@@ -152,7 +152,7 @@
    import {CreateURL} from '@/utils.js'
    import {client} from '@/client.js'
    
-   import { useMainStore } from '@/stores/mainStore.js';
+   import { useMainStore } from '@/stores/mainstore.js';
 
    
    const mainStore = useMainStore()
