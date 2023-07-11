@@ -7,7 +7,7 @@ export const useMainStore = defineStore('mainstore', () => {
   const blogPosts = ref([])
   const teamMembers = ref([])
   const gallery = ref([])
-
+  const videos = ref([])
 
   async function fetchBlogPosts() {
     try {
@@ -51,7 +51,20 @@ export const useMainStore = defineStore('mainstore', () => {
    
   }
 
+  async function fetchVideos() {
+    try {
+        videos.value  = 
+      await client.fetch('*[_type == "videos"]');
+    //localStorage.setItem('@articles', JSON.stringify(articles.value))
+        console.log(videos.value)
+    } catch (error) {
+      //  fetchArticles()
+      console.log(error, 'In article.js')
+    }
+   
+  }
 
 
-  return { count, blogPosts, fetchBlogPosts, teamMembers, fetchTeamMembers, gallery, fetchGallery }
+
+  return { count, blogPosts, fetchBlogPosts, teamMembers, fetchTeamMembers, gallery, fetchGallery, videos, fetchVideos }
 })

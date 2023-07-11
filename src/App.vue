@@ -29,6 +29,8 @@ onBeforeMount(()=>{
     mainStore.fetchBlogPosts()
   mainStore.fetchTeamMembers()
   mainStore.fetchGallery()
+  mainStore.fetchVideos()
+
 })
 setTimeout(() => {
   loading.value= false

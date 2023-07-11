@@ -16,9 +16,10 @@
       <li @click="router.push('/')"><a>Home</a></li>
       <li @click="router.push('/about')"><a>About us</a></li>
       <li  @click="router.push('/achievements')"><a>Our achievements</a></li>
-      <li  @click="router.push('/blog')"><a>Our blog</a></li>
       <li  @click="router.push('/team')" ><a >Our team</a></li>
       <li  @click="router.push('/gallery')" ><a >Gallery</a></li>
+      <li  @click="router.push('/videos')" ><a >Videos</a></li>
+
       <li  @click="router.push('/join')" ><a>Join Us</a></li>
 
       <input type="checkbox" class="toggle toggle-lg ml-4 mt-5 mb-5" @click="props.darkModex" />

@@ -1,19 +1,19 @@
 <template>
     <div v-motion-fade>
    <div >
-     <div class="mt-4 mb-4 mx-4 font-bold text-2xl text-left">{{ article.title }}</div>
+     <div class="mt-4 mb-4 mx-4 font-bold text-2xl text-left">{{ teamMember.name }}</div>
    
      <div class="flex flex-row justify-center">
    <img
    
                alt="image"
-               :src="CreateURL(article.mainImage)"
+               :src="CreateURL(teamMember.image.asset._ref)"
                class="mb-4 imc"
              />
            </div>
    
              <div class="mx-4 blockstyle">
-              <SanityBlocks :blocks="article.body" :serializers="serializers"  /> 
+              <SanityBlocks :blocks="teamMember.bio" :serializers="serializers"  /> 
    
              </div>
    
@@ -28,12 +28,11 @@
                />
                <span class="font-bold mx-2">{{ teamMember.name }}</span>
              </div>
-             <span class="font-extrabold text-sm ml-14">{{`${new Date(article.publishedAt).getDay()}/
-              ${new Date(article.publishedAt).getMonth()}/ ${new Date(article.publishedAt).getFullYear()}` }}</span>
+           
            </div>
           
    
-             <div class="blog-post-container5">
+             <!-- <div class="blog-post-container5">
              <button class="btn bg-amber-600">
                <svg viewBox="0 0 877.7142857142857 1024" class="blog-post-icon2">
                  <path
@@ -87,7 +86,7 @@
    <button @click="postComment" :loading="loading" class="btn btn-secondary">Send</button>
    </div>
    </div>
-           </div>
+           </div> -->
    
 <!--    
            <div class="bg-gray-200 py-12 ">
@@ -123,19 +122,6 @@
     -->
    </div>
    
-   
-   <div class="btm-nav h-10 bg-opacity-90 bg-slate-50 ">
-        <button @click="router.go(-1)">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H6M12 5l-7 7 7 7"/></svg> 
-             <!-- <span class="btm-nav-label">Back</span> -->
-        </button>
-        <button class="">
-          <span class="btm-nav-label">_</span>
-        </button>
-        <button @click="router.push('/')">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg> 
-             <!-- <span class="btm-nav-label">Next</span> -->
-        </button>
       </div>
    
    
@@ -149,9 +135,7 @@
    import {useRoute, useRouter} from 'vue-router'
    import { onBeforeMount, ref, h, reactive, onBeforeUnmount } from 'vue'
    
-   import {CreateURL} from '@/utils.js'
-   import {client} from '@/client.js'
-   
+   import {CreateURL} from '@/utils.js'   
    import { useMainStore } from '@/stores/mainstore.js';
 
    
@@ -167,85 +151,19 @@
      },
    };
    
-   const name = ref('')
-   const message = ref('')
-   
-   
    const router = useRouter()
    const route = useRoute()
    const isMobile = navigator.userAgentData.mobile;
-   const cor = reactive({x: (isMobile?200:1200), y:(isMobile?300:720)})
    
-   const articles = ref([])
    const teamMember = ref()
 
-   const categories = ref([])
-   const authors = ref([])
-   const comments = ref([])
-   const contentH = ref()
-   
-   
-   const loading= ref(false)
    const article= ref()
-   
-   const showComments = ref(false)
-   
-   
-   async function getComments(){
-     comments.value  = await client.fetch(`*[_type == "comment" && article == "${route.params.slug}"]`)
-     
-   // localStorage.setItem('@categories', JSON.stringify(categories.value))
-     console.log(comments.value)
-   }
-   
-   async function postComment(){
-     loading.value =true
-     const doc={
-       _type:'comment',
-       name: name.value,
-       message: message.value,
-       article: route.params.slug
-     };
-     client.create(doc).then((res) => {
-     console.log(`Doc ${res} created successfully`)
-    
-       showComments.value = false
-       name.value= ''
-     message.value = ''
-     loading.value =false
-   
-   })
-   }
-   
-   const array = ['cont', 'cont1', 'cont2', 'cont3', 'cont4'];
-   
-   const randomIndex = Math.floor(Math.random() * array.length);
-   const contx = array[randomIndex];
-   
+           
    
    onBeforeMount(() => {
-     articles.value = mainStore.blogPosts
-     article.value = articles.value.filter(a => a.slug.current === route.params.slug)[0]
-     teamMember.value = mainStore.teamMembers.filter( x => x._id === article.value.teammember._ref)[0]
-    //  console.log(teamMember.value)
-     document.title =  article.value.title;
-     var metaDescription = document.querySelector('meta[name="description"]');
-     var metaImage = document.querySelector('meta[property="og:image"]');
-   
-     if (!metaDescription) {
-       metaDescription = document.createElement('meta');
-       metaDescription.setAttribute('name', 'description');
-       document.getElementsByTagName('head')[0].appendChild(metaDescription);
-     }
-     
-     if (!metaImage) {
-       metaImage = document.createElement('meta');
-       metaImage.setAttribute('property', 'og:image');
-       document.getElementsByTagName('head')[0].appendChild(metaImage);
-     }
-   
-     metaDescription.setAttribute('content', article.value.description);
-     metaImage.setAttribute('content', CreateURL(article.value.mainImage));
+  
+     teamMember.value = mainStore.teamMembers.filter( x => x.slug.current === route.params.slug)[0]
+     console.log(teamMember.value)
    
    })
    
