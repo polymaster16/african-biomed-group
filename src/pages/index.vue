@@ -324,6 +324,19 @@ Never the less, you can see our current achivements so far
        :src="CreateURL(galleryImage.mainImage.asset._ref)" alt="" srcset="">
       </div>
 
+
+      <div class="font-bold text-2xl text-center mb-3 mt-9 "> 
+        🎥 Videos</div>
+
+        <div class="flex flex-col justify-center mx-4 lg:mx-6 gap-4">
+          <iframe v-for="video in mainStore.videos" class="vid"
+      :src="`https://www.youtube.com/embed/${extractVideoId(video.url)}`"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+   
+</div>
+
 </div>
 
 
@@ -341,9 +354,25 @@ import { RouterLink, useRouter } from 'vue-router';
 const mainStore = useMainStore()
 const readMore = ref(false)
 const router = useRouter()
+
+const extractVideoId = (url) => {
+      const videoIdRegex = /(?:youtube(?:-nocookie)?\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=|youtu\.be\/|.*[?&]vi=))([^"&?/ ]{11})/
+      const match = url.match(videoIdRegex)
+      if (match && match.length === 2) {
+        return match[1]
+      } else {
+        return null
+      }
+    }
 </script>
 
 <style scoped>
+.vid{
+  width: auto;
+  height: 350px;
+  border-width: 5px;
+  border-color: rgb(0, 113, 9);
+}
 .secte{
   width: 100vw;
   height: 250px;

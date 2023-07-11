@@ -16,13 +16,13 @@
 </template>
 
 <script setup>
- import "@mux/mux-player";
-import {CreateURL} from '@/utils.js'
+//  import "@mux/mux-player";
+// import {CreateURL} from '@/utils.js'
 import {useMainStore} from '@/stores/mainstore.js'
-import 'vidstack/styles/defaults.css'
-import 'vidstack/styles/community-skin/video.css'
-// the `.js` extension is required.
-import 'vidstack/define/media-player.js';
+// import 'vidstack/styles/defaults.css'
+// import 'vidstack/styles/community-skin/video.css'
+// // the `.js` extension is required.
+// // import 'vidstack/define/media-player.js';
 
 import { defineCustomElements } from 'vidstack/elements';
 
