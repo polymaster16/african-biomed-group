@@ -227,7 +227,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="px-4 pt-5 pb-12 bg-blue-300 dark:bg-blue-400 mt-14">
+<div class="px-4 pt-5 pb-12 bg-gray-400 dark:bg-blue-400 mt-14">
 <div class="font-bold text-2xl text-gray-900 text-center mt-6 "> 
    Help us provide support to those who need it most</div>
    <div class="flex flext-row justify-center mt-4">
@@ -328,7 +328,7 @@ Never the less, you can see our current achivements so far
       <div class="font-bold text-2xl text-center mb-3 mt-9 "> 
         🎥 Videos</div>
 
-        <div class="flex flex-col justify-center mx-4 lg:mx-6 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center mx-4 lg:mx-6 gap-4">
           <iframe v-for="video in mainStore.videos" class="vid"
       :src="`https://www.youtube.com/embed/${extractVideoId(video.url)}`"
       frameborder="0"
