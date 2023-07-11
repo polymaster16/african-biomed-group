@@ -356,7 +356,7 @@ const readMore = ref(false)
 const router = useRouter()
 
 const extractVideoId = (url) => {
-      const videoIdRegex = /(?:youtube(?:-nocookie)?\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=|youtu\.be\/|.*[?&]vi=))([^"&?/ ]{11})/
+      const videoIdRegex = /^(?:(?:https?:\/\/)?(?:www\.)?youtube\.com\/shorts\/|https?:\/\/youtu\.be\/)([a-zA-Z0-9_-]{11})/
       const match = url.match(videoIdRegex)
       if (match && match.length === 2) {
         return match[1]
@@ -364,6 +364,9 @@ const extractVideoId = (url) => {
         return null
       }
     }
+
+
+
 </script>
 
 <style scoped>
