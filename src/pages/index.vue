@@ -140,7 +140,7 @@
       </div>
     
 
-      <div class="bg-green-100 dark:bg-green-900 py-7 mt-12">
+      <div class="bg-green-50 dark:bg-green-900 py-7 mt-12">
       <div class="font-bold text-2xl text-center  mb-5 ">🌱 Projects and reallisations</div>
 
           <div class="flex flex-row justify-center mx-2">
@@ -314,7 +314,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="bg-green-100 dark:bg-green-900 pb-8">
+<div class="bg-green-50 dark:bg-green-900 pb-8">
 <div class="font-bold text-2xl text-center pt-6 mb-6  "> 
    📰 Our Gallery</div>
 
