@@ -111,10 +111,10 @@
       </p></div>
       </v-card>
 
-      <v-card variant="tonal" color="amber-lighten-1" >
+      <v-card variant="tonal" color="grey-darken-2" >
             <div class="p-4">
                <div class="flex flex-row justify-center mb-3" >
-              <v-icon class="text-orange-400" animation="float" scale="6" name="fa-hand-holding-medical"></v-icon></div>
+              <v-icon class="text-gray-500" animation="float" scale="6" name="fa-hand-holding-medical"></v-icon></div>
             <p class="text-sm">
                Our dedicated team provides vital medical services, education, and training to healthcare professionals, empowering local communities to take charge of their well-being.
       </p></div>
@@ -129,10 +129,10 @@
       </p></div>
       </v-card>
 
-      <v-card variant="tonal" color="amber-lighten-1" >
+      <v-card variant="tonal" color="grey-darken-2" >
             <div class="p-4">
                <div class="flex flex-row justify-center mb-3">
-              <v-icon  class="text-amber-500"  animation="float" scale="6" name="md-groups"></v-icon></div>
+              <v-icon  class="text-gray-500"  animation="float" scale="6" name="md-groups"></v-icon></div>
             <p class="text-sm">
                Together, let's transform healthcare and uplift communities, one step at a time. Join The African Biomed Group today.      </p></div>
       </v-card>
@@ -227,7 +227,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="px-4 pt-5 pb-12 bg-gray-400 dark:bg-blue-400 mt-14">
+<div class="px-4 pt-5 pb-12 bg-gray-300 dark:bg-gray-500 mt-14">
 <div class="font-bold text-2xl text-gray-900 text-center mt-6 "> 
    Help us provide support to those who need it most</div>
    <div class="flex flext-row justify-center mt-4">
@@ -291,19 +291,21 @@ Never the less, you can see our current achivements so far
    ⚓ Where are we?</div>
  <div class="px-4 mb-20">
   <div class="hero-content flex-col lg:flex-row mx-21">
-    <img width="400" src="https://media.istockphoto.com/id/187791775/photo/map-cameroon.jpg?s=612x612&w=0&k=20&c=26Gve8z81JehF4S48mSFUKMyLtD8ZyFw4TwUOxHz31k=" class=" rounded-lg shadow-2xl" />
+    <img style="filter: sepia(100%) hue-rotate(120deg);"
+     width="400" src="https://thumbs.dreamstime.com/b/cameroon-map-highly-detailed-vector-administrative-regions-main-cities-roads-31962541.jpg" class=" rounded-lg shadow-2xl" />
     <div class="">
       <h1 class="text-3xl font-bold  lg:mx-1">Cameroon!</h1>
       <p class="py-6  lg:mx-1">In Cameroon, our campaigns and donations have made a lasting impact. Join us in creating change, assisting those in need, and building a better future. Together, we make a difference.</p>
       <div class="flex flex-row justify-start mx-4">
-      <v-btn @click="router.push('/achievements')" rounded="full" variant="tonal" color="amber-lighten-1"><p class="text-sm">⭐ See our achievements</p> </v-btn>
+      <v-btn @click="router.push('/achievements')" rounded="full" variant="tonal" color="green-darken-1"><p class="text-sm">⭐ See our achievements</p> </v-btn>
          </div>
 
    </div>
 </div>
 
 <div class="hero-content flex-col lg:flex-row">
-    <img width="400" src="https://www.nationsonline.org/maps/USA-Topo-Map.jpg"  class=" rounded-lg shadow-2xl"  />
+    <img style=" filter: sepia(100%) hue-rotate(120deg);"
+     width="400" src="https://www.nationsonline.org/maps/USA-Topo-Map.jpg"  class=" rounded-lg shadow-2xl"  />
     <div>
       <h1 class="text-3xl font-bold ">USA!</h1>
       <p class="py-6">Our physical location is 811 S Central Expwy, Ste 201E, Richardson, TX 75080, United States of America. Being based in the US allows us to access medical equipment, perform repairs and refurbishments, and efficiently ship them to Africa. It is also within the US that we primarily raise funds to support our mission.</p>
@@ -374,11 +376,13 @@ const extractVideoId = (url) => {
   width: auto;
   height: 350px;
   border-width: 5px;
-  border-color: rgb(0, 113, 9);
+  border-color: rgb(96, 96, 96);
 }
 .secte{
   width: 100vw;
   height: 250px;
+  filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
   background-position: center;
   background-size: cover;
    background-image: url('https://elephantinthelab.org/wp-content/uploads/2018/11/A_group_of_African_students_working_in_the_lab.jpg');
