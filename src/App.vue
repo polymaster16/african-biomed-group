@@ -24,29 +24,28 @@ function darkModexy(){
     }
 }
 
+async function fetchAll(){
+  await mainStore.fetchBlogPosts()
+  await mainStore.fetchTeamMembers()
+  await mainStore.fetchGallery()
+  await mainStore.fetchVideos()
+  loading.value= false
+
+}
+
 onBeforeMount(()=>{
   toggleDark(false)
-    mainStore.fetchBlogPosts()
-  mainStore.fetchTeamMembers()
-  mainStore.fetchGallery()
-  mainStore.fetchVideos()
+fetchAll();
 
 })
-setTimeout(() => {
-  loading.value= false
-}, 2000);
 
 </script>
 
 <template>
   <div :data-theme="mode" >
-   <div v-motion-fade v-if="loading" class="flex flex-row justify-center my-14">
-    <v-progress-circular
-    :size="70"
-      :width="7"
-      color="amber"
-      indeterminate
-    ></v-progress-circular>
+   <div  style="height: 90vh;" v-motion-fade v-if="loading" class="flex flex-col justify-center my-14">
+    <div class="flex flex-row justify-center">
+   <img width="100" src="./assets/Candle.gif" alt="" srcset=""></div>
   </div>
   <div v-motion-slide-left v-else class="folt">
     <navbar :dark-modex="darkModexy"/>
