@@ -1,9 +1,9 @@
 <template>
   
     <div v-motion-slide-right class="bg-orange-100 dark:bg-gray-800 py-14 ">
-        <div class="font-bold text-2xl text-center  mb-5 ">🌱 Projects and reallisations</div>
+        <div class="font-bold text-2xl text-left mx-5 text-gray-950 dark:text-gray-50  mb-5 ">🌱 Projects and reallisations</div>
   
-            <div class="flex flex-row justify-center mx-2">
+            <div class="flex flex-row justify-center mx-2 ">
         <div class="grid grid-cols-2 lg:grid-cols-6 self-center gap-4 mt-4">
            
            <v-lazy v-for="post in mainStore.blogPosts" v-bind:key="post._id"
@@ -22,7 +22,7 @@
      </div>
   </div>   
   
-  <div class="mx-4 mt-4">
+  <div class="mx-4 mt-4 text-gray-950 dark:text-gray-50">
   We Collect Used Medical Equipment from U.S and These Equipment needs minor and major repairing we need your support to do such repairing and ship them to Cameroon.
   <br> <br>
   Never the less, you can see our current achivements so far 

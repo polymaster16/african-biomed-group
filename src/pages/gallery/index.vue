@@ -1,6 +1,6 @@
 <template>
     <div v-motion-slide-right>
-      <div class="font-bold text-2xl text-center mb-3  "> 
+      <div class="font-bold text-2xl text-gray-950 dark:text-gray-50 text-center mb-3  "> 
         🖼️ Our gallery</div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 mx-4 gap-4 justify-center">

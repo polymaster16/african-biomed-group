@@ -77,7 +77,7 @@
     </v-carousel-item>
   </v-carousel>
 
-  <div class="text-2xl text-center mt-6 mb-6 font-extrabold"> 🌼 About Us</div>
+  <div class="text-2xl text-gray-950 dark:text-gray-50 text-center mt-6 mb-6 font-extrabold"> 🌼 About Us</div>
 
    <p class="mx-4" v-if="false">
        -Come and be part of the African Biomed Group, where we're passionate about transforming
@@ -111,7 +111,7 @@
       </p></div>
       </v-card>
 
-      <v-card variant="tonal" color="grey-darken-2" >
+      <v-card variant="tonal" color="grey-lighten-3" >
             <div class="p-4">
                <div class="flex flex-row justify-center mb-3" >
               <v-icon class="text-gray-500" animation="float" scale="6" name="fa-hand-holding-medical"></v-icon></div>
@@ -129,7 +129,7 @@
       </p></div>
       </v-card>
 
-      <v-card variant="tonal" color="grey-darken-2" >
+      <v-card variant="tonal" color="grey-lighten-3" >
             <div class="p-4">
                <div class="flex flex-row justify-center mb-3">
               <v-icon  class="text-gray-500"  animation="float" scale="6" name="md-groups"></v-icon></div>
@@ -140,7 +140,7 @@
       </div>
     
 
-      <div class="bg-green-50 dark:bg-green-900 py-7 mt-12">
+      <div class="bg-green-50 text-gray-950 dark:text-gray-50  dark:bg-green-900 pt-12 mt-12">
       <div class="font-bold text-2xl text-center  mb-5 ">🌱 Projects and reallisations</div>
 
           <div class="flex flex-row justify-center mx-2">
@@ -162,7 +162,7 @@
    </div>
 </div>   
 
-<div class="mx-4 mt-4">
+<div class=" mx-5 md:mx-12 mt-4 pb-10">
 We Collect Used Medical Equipment from U.S and These Equipment needs minor and major repairing we need your support to do such repairing and ship them to Cameroon.
 <br> <br>
 Never the less, you can see our current achivements so far 
@@ -170,14 +170,14 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="font-bold text-2xl text-center mt-14 mb-6 ">💥 Our impact</div>
+<div class="font-bold text-2xl text-gray-950 dark:text-gray-50 text-center mt-14 mb-6 ">💥 Our impact</div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 <div class="flex flex-row justify-start mx-4 mb-4">
    <v-icon scale="4" color="green" name="oi-feed-heart" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">200+</p>
-   <p>People Getting Full Support</p>
+   <p class="text-gray-950 dark:text-gray-50">People Getting Full Support</p>
 </div>
 </div>
 
@@ -186,7 +186,7 @@ Never the less, you can see our current achivements so far
    <v-icon scale="4" color="green" name="pr-money-bill" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">$75k+</p>
-   <p>Spent on Welfare</p>
+   <p class="text-gray-950 dark:text-gray-50">Spent on Welfare</p>
 </div>
 </div>
 
@@ -195,7 +195,7 @@ Never the less, you can see our current achivements so far
    <v-icon scale="4" color="green" name="fa-wheelchair" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">50+</p>
-   <p>Wheelchairs</p>
+   <p class="text-gray-950 dark:text-gray-50">Wheelchairs</p>
 </div>
 </div>
 
@@ -203,7 +203,7 @@ Never the less, you can see our current achivements so far
    <v-icon scale="4" color="green" name="fa-wheelchair" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">20+</p>
-   <p>Electric Wheelchairs</p>
+   <p class="text-gray-950 dark:text-gray-50">Electric Wheelchairs</p>
 </div>
 </div>
 
@@ -212,7 +212,7 @@ Never the less, you can see our current achivements so far
    <v-icon scale="4" color="green" name="gi-slot-machine" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">50+</p>
-   <p>Defibrillator</p>
+   <p class="text-gray-950 dark:text-gray-50">Defibrillator</p>
 </div>
 </div>
 
@@ -220,15 +220,15 @@ Never the less, you can see our current achivements so far
    <v-icon scale="4" color="green" name="md-medicalservices-round" />
    <div class="flex flex-col justify-center ml-4">
       <p class="text-2xl font-bold text-green-600 ">90+</p>
-   <p>Miscellaneous Medical Equipment
+   <p class="text-gray-950 dark:text-gray-50">Miscellaneous Medical Equipment
 </p>
 </div>
 </div>
 </div>
 
 
-<div class="px-4 pt-5 pb-12 bg-gray-300 dark:bg-gray-500 mt-14">
-<div class="font-bold text-2xl text-gray-900 text-center mt-6 "> 
+<div class="px-4 pt-5 pb-12 bg-gray-300 dark:bg-green-800 mt-14">
+<div class="font-bold text-2xl text-gray-950 dark:text-gray-50 text-center mt-6 "> 
    Help us provide support to those who need it most</div>
    <div class="flex flext-row justify-center mt-4">
  <v-btn variant="elevated" size="large" rounded="xl" color="amber-lighten-1"> 
@@ -241,41 +241,41 @@ Never the less, you can see our current achivements so far
 </div>
 </div>
 
-<div class="font-bold text-2xl text-center mt-10"> 
+<div class="font-bold text-2xl text-gray-950 dark:text-gray-50 text-center mt-10"> 
    🔥 Our team</div>
 
    <div class="my-6 mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-   <v-card>
+   <v-card color="grey-darken-3">
    <div class="mx-4 flex flex-row my-4">
       <img class="rimg"
       loading="lazy"
       src="https://media.licdn.com/dms/image/D5603AQHaY7S9XzH2eg/profile-displayphoto-shrink_200_200/0/1675012857279?e=1691625600&v=beta&t=Kaf5IVdya_WHlt_6Hie7iie7ZEa-rrzKm7ng_evheNU" alt="" srcset="">
    <div class="flex flex-col justify-center mx-4 ">
-      <p class="text-xl font-extrabold text-green-700">Alain Lengue
+      <p class="text-xl font-extrabold text-green-500">Alain Lengue
 </p>
 <p class="text-sm font-thin">Chairman of the group</p>
    </div>
    </div>
 </v-card>
 
-<v-card >
+<v-card color="grey-darken-3">
    <div class="mx-4 flex flex-row my-4">
       <img class="rimg"
       loading="lazy"
       src="https://media.licdn.com/dms/image/C4E03AQHCq4xINcdbYQ/profile-displayphoto-shrink_800_800/0/1594337151904?e=2147483647&v=beta&t=evz2eiQWuoYS0Z3yjUHFp6q0tyx8Gc_P5mAOb9dMz6M" alt="" srcset="">
       <div class="flex flex-col justify-center mx-4 ">
-      <p class="text-xl font-extrabold text-green-700">Luc Ngassam
+      <p class="text-xl font-extrabold text-green-500">Luc Ngassam
 </p>
 <p class="text-sm font-thin">Director of projects</p>
    </div>   </div></v-card>
 
-   <v-card>
+   <v-card color="grey-darken-3">
    <div class="mx-4 flex flex-row my-4">
       <img class="rimg"
       loading="lazy"
       src="https://mentoring-club-mentors.s3.eu-central-1.amazonaws.com/profilepics/small/0ed7bf8a-4d08-47c7-b5d7-3957340f1c9b.jpg" alt="" srcset="">
       <div class="flex flex-col justify-center mx-4 ">
-      <p class="text-xl font-extrabold text-green-700">Eric Yanou
+      <p class="text-xl font-extrabold text-green-500">Eric Yanou
 </p>
 <p class="text-sm font-thin">Director of operations</p>
    </div>    </div> 
@@ -287,7 +287,7 @@ Never the less, you can see our current achivements so far
 </div>
 </div>
 
-<div class="font-bold text-2xl text-center mb-3  "> 
+<div class="font-bold text-gray-950 dark:text-gray-50 text-2xl pt-5 text-center mb-3  "> 
    ⚓ Where are we?</div>
  <div class="px-4 mb-20">
   <div class="hero-content flex-col lg:flex-row mx-21">
@@ -303,7 +303,7 @@ Never the less, you can see our current achivements so far
    </div>
 </div>
 
-<div class="hero-content flex-col lg:flex-row">
+<div class="hero-content flex-col lg:flex-row ">
     <img style=" filter: sepia(100%) hue-rotate(120deg);"
      width="400" src="https://www.nationsonline.org/maps/USA-Topo-Map.jpg"  class=" rounded-lg shadow-2xl"  />
     <div>
@@ -315,7 +315,7 @@ Never the less, you can see our current achivements so far
 
 
 <div class="bg-green-50 dark:bg-green-900 pb-8">
-<div class="font-bold text-2xl text-center pt-6 mb-6  "> 
+<div class="font-bold text-gray-950 dark:text-gray-50 text-2xl text-center pt-6 mb-6  "> 
    📰 Our Gallery</div>
 
    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 mx-4 gap-4 justify-center">
@@ -327,7 +327,7 @@ Never the less, you can see our current achivements so far
       </div>
 
 
-      <div class="font-bold text-2xl text-center mb-3 mt-9 "> 
+      <div class="font-bold text-gray-950 dark:text-gray-50 text-2xl text-center mb-3 mt-9 "> 
         🎥 Videos</div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center mx-4 lg:mx-6 gap-4">

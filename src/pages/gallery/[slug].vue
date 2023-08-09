@@ -1,9 +1,9 @@
 <template>
-    <div v-motion-slide-right>
-      <div class="font-bold text-2xl text-center mb-3  "> 
+    <div v-motion-slide-right class="ss">
+      <div class="font-bold text-2xl text-center mb-3 "> 
         🖼️ Our gallery</div>
 
-        <div class="mx-6">
+        <div class="mx-6 ss">
       <img
       loading="lazy"
        class="imgn my-1"
@@ -32,11 +32,22 @@ const zeImage = mainstore.gallery.filter( x => x.imagename === route.params.slug
 </script>
 
 <style scoped>
+.ss{
+  margin-left: 200px;
+  margin-right: 200px;
+}
 .imgn{
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
+}
+
+@media (max-width: 900px) {
+  .ss{
+  margin-left: 0px;
+  margin-right: 0px;
+}
 }
 
 

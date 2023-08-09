@@ -2,13 +2,15 @@
 import { useDark, useToggle } from '@vueuse/core';
 import { RouterLink, RouterView } from 'vue-router'
 import navbar from './components/navbar.vue';
+import navbar2   from './components/navbar2.vue';
+
 import {useMainStore} from './stores/mainstore'
 import { onBeforeMount, ref } from 'vue';
 import footerx from './components/footer.vue';
 
 const mainStore = useMainStore()
 const loading= ref(true)
-const mode = ref('light')
+const mode = ref('dark')
 
 const darkMode = useDark();
 const toggleDark = useToggle(darkMode);
@@ -34,7 +36,7 @@ async function fetchAll(){
 }
 
 onBeforeMount(()=>{
-  toggleDark(false)
+  toggleDark(true)
 fetchAll();
 
 })
@@ -48,7 +50,8 @@ fetchAll();
    <img width="100" src="./assets/Candle.gif" alt="" srcset=""></div>
   </div>
   <div v-motion-slide-left v-else class="folt">
-    <navbar :dark-modex="darkModexy"/>
+    <!-- <navbar :dark-modex="darkModexy"/> -->
+    <navbar2 :dark-modex="darkModexy"/>
   <RouterView />
   <footerx></footerx>
 

@@ -1,13 +1,13 @@
 <template>
     <div v-motion-fade>
-   <div >
-     <div class="mt-4 mb-4 mx-4 font-bold text-2xl text-left">{{ article.title }}</div>
+   <div class="text-gray-950 dark:text-gray-50 ss">
+     <div class="mt-4 mb-4 mx-5 font-bold text-2xl text-left">{{ article.title }}</div>
    
      <div class="flex flex-row justify-center">
    <img
    
                alt="image"
-               :src="CreateURL(article.mainImage)"
+               :src="CreateURL(article.mainImage, 480, 360)"
                class="mb-4 imc"
              />
            </div>
@@ -253,6 +253,10 @@
    </script>
    
    <style scoped>
+   .ss{
+    margin-left: 200px;
+    margin-right: 200px;
+   }
    .blockstyle{
      line-height: 1.6;
      white-space: break-spaces;
@@ -533,6 +537,10 @@
      }
    }
    @media(max-width: 767px) {
+    .ss{
+    margin-left: 5px;
+    margin-right: 5px;
+   }
      .blog-post-container5 {
        height: auto;
        padding-bottom: var(--dl-space-space-unit);
