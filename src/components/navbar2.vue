@@ -46,6 +46,16 @@
                     Achievements
                   </router-link>
                 </li>
+
+                <li>
+                  <router-link
+                    class="text-gray-900 dark:text-gray-50  transition hover:text-green-500/75"
+                    to="/team"
+                  >
+                    Team
+                  </router-link>
+                </li>
+    
     
                 <li>
                   <router-link
@@ -220,6 +230,15 @@
                     Achievements
                   </router-link>
                 </li>
+
+                <li>
+                  <router-link
+                    class="text-gray-950 dark:text-gray-50 transition hover:text-green-500/75 dark:hover:text-green-500/75"
+                    to="/team"
+                  >
+                    Team
+                  </router-link>
+                </li>
     
                 <li>
                   <router-link
@@ -247,12 +266,7 @@
                     Blog
                   </RouterLink>
                 </li>
-
-                
               </ul>
-
-
-
             </nav>
           </div>
     

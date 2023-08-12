@@ -5,7 +5,7 @@
    🔥 Our team</div>
 
    <div class="my-6 mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-   <v-card v-for="member in mainStore.teamMembers">
+   <v-card color="grey-darken-3" v-for="member in mainStore.teamMembers">
    <router-link :to="`team/${member.slug.current}`" class="mx-4 flex flex-row my-4">
       <img class="rimg"
       loading="lazy"

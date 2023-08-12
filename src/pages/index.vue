@@ -249,7 +249,7 @@ Never the less, you can see our current achivements so far
    <div class="mx-4 flex flex-row my-4">
       <img class="rimg"
       loading="lazy"
-      src="https://media.licdn.com/dms/image/D5603AQHaY7S9XzH2eg/profile-displayphoto-shrink_200_200/0/1675012857279?e=1691625600&v=beta&t=Kaf5IVdya_WHlt_6Hie7iie7ZEa-rrzKm7ng_evheNU" alt="" srcset="">
+      src="https://cdn.sanity.io/images/kubhsqme/production/f7c5191fccad1c39d4d75c3e52ab7952e9dcc621-200x200.png?w=300&h=300" alt="" srcset="">
    <div class="flex flex-col justify-center mx-4 ">
       <p class="text-xl font-extrabold text-green-500">Alain Lengue
 </p>
