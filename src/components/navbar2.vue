@@ -169,7 +169,7 @@
             <li>
                 <a
                 class="rounded-sm mt-5 bg-green-700 w-24  py-2.5 text-sm font-medium text-white shadow"
-                href="/donate"
+                href="https://donate.stripe.com/00gg1x49X9Ci8245kk"
               >
                Donate
               </a>
@@ -273,12 +273,12 @@
           <div class="flex items-center gap-4">
             <div class="sm:flex sm:gap-4 hidden">
                 
-              <router-link
+              <a
                 class="rounded-sm bg-green-700 px-5 py-2.5 text-sm font-medium text-white shadow"
-                to="/reservation"
+                href="https://donate.stripe.com/00gg1x49X9Ci8245kk"
               >
                 Donate
-              </router-link>
+              </a>
     
             </div>
     
