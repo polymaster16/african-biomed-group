@@ -25,7 +25,7 @@
     <div class="mainImage2 ">
 <div class="shadow">
    <p class="text-white font-extrabold mx-4 text-2xl lg:text-2xl text-center">
-      Breaking Barriers to Healthcare Access
+      Breaking <span class="text-yellow-500">Barriers</span>  to  <span class="text-yellow-500">Healthcare</span>  Access
    </p>
    <p class="heroText mt-4 lg:mt-6 hover:scale-125">
       <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/> </svg>
@@ -67,7 +67,7 @@
     <div class="mainImage5 ">
 <div class="shadow">
    <p class="text-white font-extrabold mx-4 text-2xl lg:text-2xl text-center">
-      Join Us in Building a Healthier Future Together
+      Join Us in <span class="text-green-100">Building</span>  a Healthier Future  <span class="text-green-100">Together</span> 
    </p>
    <p class="heroText mt-4 lg:mt-6 hover:scale-125">
       <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/> </svg>
@@ -102,7 +102,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4">
 
-         <v-card variant="tonal" color="green-lighten-1" >
+         <v-card v-motion-slide-left :duration="900" variant="tonal" color="green-lighten-1" >
             <div class="p-4">
                <div class="flex flex-row justify-center mb-3">
               <v-icon  class="text-green-700"  animation="float" scale="6" name="ai-africarxiv-square"></v-icon></div>
@@ -111,7 +111,7 @@
       </p></div>
       </v-card>
 
-      <v-card variant="tonal" color="grey-lighten-3" >
+      <v-card  v-motion-slide-visible-left :duration="900" variant="tonal" color="grey-lighten-3" >
             <div class="p-4">
                <div class="flex flex-row justify-center mb-3" >
               <v-icon class="text-gray-500" animation="float" scale="6" name="fa-hand-holding-medical"></v-icon></div>
@@ -120,7 +120,7 @@
       </p></div>
       </v-card>
 
-      <v-card variant="tonal" color="green-lighten-1">
+      <v-card  v-motion-slide-visible-left :duration="900" variant="tonal" color="green-lighten-1">
             <div class="p-4">
                <div class="flex flex-row justify-center mb-3">
               <v-icon  class="text-green-700"  animation="float" scale="6" name="md-homerepairservice"></v-icon></div>
@@ -129,7 +129,7 @@
       </p></div>
       </v-card>
 
-      <v-card variant="tonal" color="grey-lighten-3" >
+      <v-card v-motion-slide-visible-left :duration="900" variant="tonal" color="grey-lighten-3" >
             <div class="p-4">
                <div class="flex flex-row justify-center mb-3">
               <v-icon  class="text-gray-500"  animation="float" scale="6" name="md-groups"></v-icon></div>
@@ -146,10 +146,7 @@
           <div class="flex flex-row justify-center mx-2">
       <div class="grid grid-cols-2 lg:grid-cols-6 self-center gap-4 mt-4">
          
-         <v-lazy v-for="post in mainStore.blogPosts" v-bind:key="post._id"
-  :min-height="50"
-  :options="{'threshold':0.5}"
-  transition="fade-transition">
+         <div v-motion-slide-visible-left :duration="900" v-for="post in mainStore.blogPosts" v-bind:key="post._id">
       <div  :style="`background-image: url(${CreateURL(post.mainImage, 1200, 700)})`" class="slideImage">
 <RouterLink :to="`/achievements/${post.slug.current}`" class="shadow">
    <div class="font-bold text-xs text-white mx-2 ctx">
@@ -157,7 +154,7 @@
 </div>
 </RouterLink>
       </div>
-      </v-lazy>
+      </div>
 
    </div>
 </div>   
@@ -182,7 +179,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="flex flex-row justify-start mx-4 mb-4">
+<div  v-motion-slide-visible-left :duration="900" class="flex flex-row justify-start mx-4 mb-4">
    <v-icon scale="4" color="green" name="pr-money-bill" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">$75k+</p>
@@ -191,7 +188,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="flex flex-row justify-start mx-4 mb-4">
+<div  v-motion-slide-visible-left :duration="900" class="flex flex-row justify-start mx-4 mb-4">
    <v-icon scale="4" color="green" name="fa-wheelchair" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">50+</p>
@@ -199,7 +196,7 @@ Never the less, you can see our current achivements so far
 </div>
 </div>
 
-<div class="flex flex-row justify-start mx-4 mb-4">
+<div  v-motion-slide-visible-left :duration="900" class="flex flex-row justify-start mx-4 mb-4">
    <v-icon scale="4" color="green" name="fa-wheelchair" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">20+</p>
@@ -208,7 +205,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="flex flex-row justify-start mx-4 mb-4">
+<div  v-motion-slide-visible-left :duration="900" class="flex flex-row justify-start mx-4 mb-4">
    <v-icon scale="4" color="green" name="gi-slot-machine" />
    <div class="flex flex-col justify-center ml-3">
       <p class="text-2xl font-bold text-green-600 ">50+</p>
@@ -216,7 +213,7 @@ Never the less, you can see our current achivements so far
 </div>
 </div>
 
-<div class="flex flex-row justify-start mx-4 mb-4">
+<div  v-motion-slide-visible-left :duration="900" class="flex flex-row justify-start mx-4 mb-4">
    <v-icon scale="4" color="green" name="md-medicalservices-round" />
    <div class="flex flex-col justify-center ml-4">
       <p class="text-2xl font-bold text-green-600 ">90+</p>
@@ -227,7 +224,7 @@ Never the less, you can see our current achivements so far
 </div>
 
 
-<div class="px-4 pt-5 pb-12 bg-gray-300 dark:bg-green-800 mt-14">
+<div  v-motion-slide-visible-left :duration="900" class="px-4 pt-5 pb-12 bg-gray-300 dark:bg-green-800 mt-14">
 <div class="font-bold text-2xl text-gray-950 dark:text-gray-50 text-center mt-6 "> 
    Help us provide support to those who need it most</div>
    <div class="flex flext-row justify-center mt-4">
@@ -245,7 +242,7 @@ Never the less, you can see our current achivements so far
    🔥 Our team</div>
 
    <div class="my-6 mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-   <v-card color="grey-darken-3">
+   <v-card  v-motion-slide-visible-left :duration="900" color="grey-darken-3">
    <div class="mx-4 flex flex-row my-4">
       <img class="rimg"
       loading="lazy"
@@ -258,7 +255,7 @@ Never the less, you can see our current achivements so far
    </div>
 </v-card>
 
-<v-card color="grey-darken-3">
+<v-card  v-motion-slide-visible-left :duration="900" color="grey-darken-3">
    <div class="mx-4 flex flex-row my-4">
       <img class="rimg"
       loading="lazy"
@@ -269,7 +266,7 @@ Never the less, you can see our current achivements so far
 <p class="text-sm font-thin">Director of projects</p>
    </div>   </div></v-card>
 
-   <v-card color="grey-darken-3">
+   <v-card  v-motion-slide-visible-left :duration="900" color="grey-darken-3">
    <div class="mx-4 flex flex-row my-4">
       <img class="rimg"
       loading="lazy"
@@ -281,7 +278,7 @@ Never the less, you can see our current achivements so far
    </div>    </div> 
 </v-card> </div> 
 
-<div class="secte mb-14 mt-10 flex flex-col justify-center">
+<div  v-motion-slide-visible-left :duration="900" class="secte mb-14 mt-10 flex flex-col justify-center">
    <div class="flex flex-row justify-center">
  <button @click="router.push('/about')" class="btn  glass text-white">Learn more about us </button>
 </div>
@@ -289,7 +286,7 @@ Never the less, you can see our current achivements so far
 
 <div class="font-bold text-gray-950 dark:text-gray-50 text-2xl pt-5 text-center mb-3  "> 
    ⚓ Where are we?</div>
- <div class="px-4 mb-20">
+ <div  v-motion-slide-visible-left :duration="900" class="px-4 mb-20">
   <div class="hero-content flex-col lg:flex-row mx-21">
     <img style="filter: sepia(100%) hue-rotate(120deg);"
      width="400" src="https://thumbs.dreamstime.com/b/cameroon-map-highly-detailed-vector-administrative-regions-main-cities-roads-31962541.jpg" class=" rounded-lg shadow-2xl" />
@@ -303,7 +300,7 @@ Never the less, you can see our current achivements so far
    </div>
 </div>
 
-<div class="hero-content flex-col lg:flex-row ">
+<div  v-motion-slide-visible-left :duration="900" class="hero-content flex-col lg:flex-row ">
     <img style=" filter: sepia(100%) hue-rotate(120deg);"
      width="400" src="https://www.nationsonline.org/maps/USA-Topo-Map.jpg"  class=" rounded-lg shadow-2xl"  />
     <div>
@@ -319,7 +316,7 @@ Never the less, you can see our current achivements so far
    📰 Our Gallery</div>
 
    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 mx-4 gap-4 justify-center">
-      <img v-for="galleryImage in mainStore.gallery"
+      <img  v-motion-slide-visible-left :duration="900" v-for="galleryImage in mainStore.gallery"
       @click="$router.push(`/gallery/${galleryImage.imagename}`)"
       loading="lazy"
        class="imgn my-1"
@@ -331,7 +328,7 @@ Never the less, you can see our current achivements so far
         🎥 Videos</div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center mx-4 lg:mx-6 gap-4">
-          <iframe v-for="video in mainStore.videos" class="vid"
+          <iframe  v-motion-slide-visible-left :duration="900" v-for="video in mainStore.videos" class="vid"
       :src="`https://www.youtube.com/embed/${extractVideoId(video.url)}`"
       frameborder="0"
       allowfullscreen
@@ -413,7 +410,7 @@ const extractVideoId = (url) => {
  background-size: cover;
  }
  .mainImage2{
- background-image: url('@/assets/fck.png');
+ background-image: url('https://collaborate.health.bu.edu/wp-content/uploads/2018/11/zambia-equipment.jpg');
  background-position: center;
  width: 100%;
  height: 100%;
@@ -421,7 +418,7 @@ const extractVideoId = (url) => {
  }
 
  .mainImage3{
- background-image: url('@/assets/tck.png');
+ background-image: url('https://media0.giphy.com/media/e80UJI8GioTgJSiyJW/giphy.gif?cid=82a1493bha1o58gwviv5yoj1w02qhbwpmoqmgeo7kxbszjj8&ep=v1_videos_related&rid=giphy.gif&ct=v');
  background-position: center;
  width: 100%;
  height: 100%;
@@ -430,14 +427,14 @@ const extractVideoId = (url) => {
 
  
  .mainImage4{
- background-image: url('@/assets/ccs.png');
+ background-image: url('https://assets.medpagetoday.net/media/images/93xxx/93531.jpg');
  background-position: center;
  width: 100%;
  height: 100%;
  background-size: cover;
  }
  .mainImage5{
- background-image: url('@/assets/doktor.png');
+ background-image: url('https://adf-magazine.com/wp-content/uploads/2022/02/2021-04-27T000000Z_87366449_MT1LTANA00036JJUL_RTRMADP_3_AFRICA-CORONAVIRUS-COVID-19-HOSPITAL-ISOLATION-MASK-NIGERIA-PANDEMIC-QUARANTINE-SOUTH-AFRICA-1.jpg');
  background-position: center;
  width: 100%;
  height: 100%;
