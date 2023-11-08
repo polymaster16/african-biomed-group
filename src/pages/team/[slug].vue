@@ -10,6 +10,7 @@
  <img
  
              alt="image"
+             style="object-fit: cover; width: 100px; height: 100px;"
              :src="CreateURL(teamMember.image.asset._ref)"
              class="mb-4 imc"
            />
