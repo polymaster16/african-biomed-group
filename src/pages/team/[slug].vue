@@ -1,36 +1,42 @@
 <template>
     <div v-motion-fade>
    <div >
-     <div class="mt-4 mb-4 mx-4 font-bold text-2xl text-left">{{ teamMember.name }}</div>
+
+    <div class="merr text-white">
+
+      <div class="mt-4 mb-4 mx-4  font-bold text-2xl text-left">{{ teamMember.name }}</div>
    
-     <div class="flex flex-row justify-center">
-   <img
-   
-               alt="image"
-               :src="CreateURL(teamMember.image.asset._ref)"
-               class="mb-4 imc"
+   <div class="flex flex-row justify-center">
+ <img
+ 
+             alt="image"
+             :src="CreateURL(teamMember.image.asset._ref)"
+             class="mb-4 imc"
+           />
+         </div>
+ 
+           <div class="mx-4 blockstyle">
+            <SanityBlocks :blocks="teamMember.bio" :serializers="serializers"  /> 
+ 
+           </div>
+ 
+ 
+           <div class="blog-post-container3 mx-4 mt-8 mb-8">
+           <div class="blog-post-profile">
+             <img
+               alt="profile"
+               :src="CreateURL(teamMember.image)"
+               loading="lazy"
+               class="blog-post-image"
              />
+             <span class="font-bold mx-2">{{ teamMember.name }}</span>
            </div>
-   
-             <div class="mx-4 blockstyle">
-              <SanityBlocks :blocks="teamMember.bio" :serializers="serializers"  /> 
-   
-             </div>
-   
-   
-             <div class="blog-post-container3 mx-4 mt-8 mb-8">
-             <div class="blog-post-profile">
-               <img
-                 alt="profile"
-                 :src="CreateURL(teamMember.image)"
-                 loading="lazy"
-                 class="blog-post-image"
-               />
-               <span class="font-bold mx-2">{{ teamMember.name }}</span>
-             </div>
-           
-           </div>
-          
+         
+         </div>
+        
+
+    </div>
+
    
              <!-- <div class="blog-post-container5">
              <button class="btn bg-amber-600">
@@ -171,11 +177,20 @@
    </script>
    
    <style scoped>
+
+   
+.merr{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+
    .blockstyle{
      line-height: 1.6;
      white-space: break-spaces;
      overflow: visible;
    }
+  }
    .imc{
      width: 90%;
    }
